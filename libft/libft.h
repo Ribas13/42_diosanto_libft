@@ -1,0 +1,23 @@
+/* libft.h */
+isalpha(char c);
+isdigit(int n);
+isalnum();
+isacii();
+isprint();
+strlen(char *str);
+memset();
+bzero();
+memcpy();
+memmove();
+strlcpy();
+strlcat();
+toupper();
+tolower();
+strchr();
+strrchr();
+strncmp();
+memchr();
+memcmp();
+memcmp();
+strnstr();
+atoi();
