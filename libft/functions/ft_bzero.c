@@ -1,0 +1,27 @@
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*b;
+	int				c;
+
+	b = s;
+	c = '\0';
+	while (n > 0)
+	{
+		*b = c;
+		b++;
+		n--;
+	}
+}
+/*
+int	main(void)
+{
+	char	*str;
+
+	str = strdup("hello111111111");
+	ft_bzero(str, 14);
+	printf("%s\n", str);
+}*/

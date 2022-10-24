@@ -1,11 +1,8 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int	isalpha(int a)
+int	ft_isalpha(int c)
 {
-	char	c;
-
-	c = a;
 	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
@@ -24,6 +21,6 @@ int main(void)
 {
     int a;
 
-    a = 'p';
+    a = '0';
     printf("is alpha?: %i", isalpha(a));
 }*/
