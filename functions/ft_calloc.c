@@ -1,45 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 11:45:40 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/25 17:34:59 by diosanto         ###   ########.fr       */
+/*   Created: 2022/10/25 17:39:09 by diosanto          #+#    #+#             */
+/*   Updated: 2022/10/25 17:41:13 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	i;
-
-	i = 0;
-	if (!s)
+	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-		{
-			return ((char *)(s + i));
-		}
-		i++;
-	}
-	if (s[i] == (char)c)
-	{
-		return ((char *)(s + i));
-	}
-	return (NULL);
+	
 }
-/*
-int	main(void)
-{
-	char *str = "HellAo";
-	int	c = 'A';
-	printf("%i", ft_strchr(str, c));
-}*/

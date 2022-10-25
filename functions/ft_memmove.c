@@ -6,14 +6,14 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:14:43 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/24 16:07:10 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/25 17:36:24 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <string.h>
 #include <stdio.h>
-//#include "libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
