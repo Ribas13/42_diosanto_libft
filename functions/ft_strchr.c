@@ -1,44 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 15:13:27 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/25 11:54:55 by diosanto         ###   ########.fr       */
+/*   Created: 2022/10/25 11:45:40 by diosanto          #+#    #+#             */
+/*   Updated: 2022/10/25 12:15:23 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include "libft.h"
 #include <stdio.h>
-#include <string.h>
 
-void	*ft_memcpy(void *dest, void *src, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	int				i;
+	int	i;
 
-	d = dest;
-	s = src;
 	i = 0;
-	while (n > 0)
+	if (!s)
 	{
-		d[i] = s[i];
-		i++;
-		n--;
+		return (NULL);
 	}
-	return (d);
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+		{
+			return ((char *)(s + i));
+		}
+		i++;
+	}
+	if (s[i] == (char)c)
+	{
+		return ((char *)(s + i));
+	}
+	return (NULL);
 }
 /*
 int	main(void)
 {
-	char	*src;
-	char	*dest;
-
-	src = strdup("hello111111111");
-	dest = strdup("makie");
-	ft_memcpy(dest, src, 14);
-	printf("%s\n", dest);
+	char *str = "HellAo";
+	int	c = 'A';
+	printf("%i", ft_strchr(str, c));
 }*/

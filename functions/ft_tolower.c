@@ -1,44 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 15:13:27 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/25 11:54:55 by diosanto         ###   ########.fr       */
+/*   Created: 2022/10/25 11:44:22 by diosanto          #+#    #+#             */
+/*   Updated: 2022/10/25 11:45:28 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, void *src, size_t n)
+int	ft_tolower(int c)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	int				i;
-
-	d = dest;
-	s = src;
-	i = 0;
-	while (n > 0)
+	if (c >= 'A' && c <= 'Z')
 	{
-		d[i] = s[i];
-		i++;
-		n--;
+		c += 32;
 	}
-	return (d);
+	return (c);
 }
-/*
-int	main(void)
-{
-	char	*src;
-	char	*dest;
-
-	src = strdup("hello111111111");
-	dest = strdup("makie");
-	ft_memcpy(dest, src, 14);
-	printf("%s\n", dest);
-}*/
