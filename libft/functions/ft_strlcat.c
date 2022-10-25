@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:15:07 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/25 10:28:35 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/25 10:29:55 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	j = dlen;
 	if ()
 	{
-		asd
+		asdasd
 	}
 }
