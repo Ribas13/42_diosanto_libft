@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 11:45:40 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/25 14:50:23 by diosanto         ###   ########.fr       */
+/*   Created: 2022/10/25 14:18:23 by diosanto          #+#    #+#             */
+/*   Updated: 2022/10/25 14:50:22 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	if (!s)
+	while (s[i] != '\0')
 	{
-		return (NULL);
+		i++;
 	}
-	while (s[i])
+	while (i >= 0)
 	{
 		if (s[i] == (char)c)
 		{
 			return ((char *)(s + i));
 		}
-		i++;
-	}
-	if (s[i] == (char)c)
-	{
-		return ((char *)(s + i));
+		i--;
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	char *str = "HellAo";
-	int	c = 'A';
-	printf("%i", ft_strchr(str, c));
-}*/
