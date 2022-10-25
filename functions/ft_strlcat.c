@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:15:07 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/25 10:29:55 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:34:29 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dlen = ft_strlen(dst);
 	slen = ft_strlen(src);
 	j = dlen;
-	if ()
+	if (dlen < dstsize - 1 && dstsize > 0)
 	{
-		asdasd
+		while (i + j <= dstsize - 1 && src[i])
+		{
+			dst[j] = src[i];
+			j++;
+			i++;
+		}
+		dst[j] = '\0';
 	}
+	if (dlen >= dstsize)
+		dlen = dstsize;
+	return (dlen + slen);
 }
