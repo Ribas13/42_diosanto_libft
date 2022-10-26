@@ -1,41 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 16:02:00 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/26 12:58:16 by diosanto         ###   ########.fr       */
+/*   Created: 2022/10/26 12:50:03 by diosanto          #+#    #+#             */
+/*   Updated: 2022/10/26 13:04:19 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
-{
-	size_t	i;
-	size_t	a;
-
-	i = 0;
-	if (little == '\0')
-		return ((char *) little);
-	while (big[i] != '\0')
-	{
-		a = 0;
-		while (big[i + a] == little[a] && i + a < len)
-		{
-			if (big[i + a] == '\0' && little[a] == '\0')
-			{
-				return ((char *)&big[i]);
-			}
-			a++;
-		}
-		if (little[a] == '\0')
-		{
-			return ((char *)big + a);
-		}
-		i++;
-	}
-	return (0);
-}
+char *ft_strjoin(char const *s1, char const *s2)
