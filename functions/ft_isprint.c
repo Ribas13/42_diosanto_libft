@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:14:33 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/24 16:06:17 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/26 12:20:14 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int	ft_isprint(int a)
+int	ft_isprint(int c)
 {
 	if ((a >= 0 && a <= 31) || (a == 127))
 	{
@@ -22,7 +22,7 @@ int	ft_isprint(int a)
 	}
 	else
 	{
-		return (a);
+		return (1);
 	}
 }
 /*
