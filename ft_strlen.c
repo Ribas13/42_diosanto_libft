@@ -6,14 +6,14 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:15:21 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/26 11:34:28 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/27 15:17:41 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 16:02:00 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/27 13:48:12 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/27 15:15:39 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	if (!little)
-		return ((const char *)big);
+		return ((char *)big);
 	while (big[i] != '\0')
 	{
 		a = 0;

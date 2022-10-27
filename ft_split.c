@@ -6,12 +6,30 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:14:06 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/27 13:38:51 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/27 14:30:49 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
+/*char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*str;
+	size_t	i;
+
+	str = (char *)malloc(sizeof(char) * len);
+	if (!str)
+		return (NULL);
+	while (start < len)
+	{
+		str[i] = s[start];
+		i++;
+		start++;
+	}
+	str[start] = '\0';
+	return (str);
+}*/
 
 int	word_counter(char const *s, char c)
 {
@@ -44,7 +62,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	start = 0;
-	arr = malloc(sizeof(char *) * word_counter(s, c) + 1);
+	arr = malloc(sizeof(char *) * (word_counter(s, c) + 1));
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)
@@ -60,7 +78,15 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	printf("%i", word_counter("Hello my name is Diogo", ' '));
-}
+	int i = 0;
+	char **array;
+
+	array = ft_split("Hello my name is Diogo", ' ');
+	while (array[i])
+	{
+		printf("%s", array[i]);
+		i++;
+	}
+}*/
