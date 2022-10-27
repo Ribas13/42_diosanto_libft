@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 15:15:07 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/26 12:41:09 by diosanto         ###   ########.fr       */
+/*   Created: 2022/10/25 15:36:40 by diosanto          #+#    #+#             */
+/*   Updated: 2022/10/27 13:33:04 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lift.h"
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	size_t	j;
-	size_t	dlen;
-	size_t	slen;
+	size_t			i;
+	const char		*str1;
+	const char		*str2;
 
 	i = 0;
-	dlen = ft_strlen(dst);
-	slen = ft_strlen(src);
-	j = dlen;
-	if (dlen < size - 1 && size > 0)
+	str1 = s1;
+	str2 = s2;
+	while (i < n)
 	{
-		while (i + j <= size - 1 && src[i])
+		if (str1[i] != str2[2])
 		{
-			dst[j] = src[i];
-			j++;
-			i++;
+			return (str1[i] - str2[i]);
 		}
-		dst[j] = '\0';
+		i++;
 	}
-	if (dlen >= size)
-		dlen = size;
-	return (dlen + slen);
+	return (0);
 }

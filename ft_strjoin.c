@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 15:14:33 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/26 12:20:14 by diosanto         ###   ########.fr       */
+/*   Created: 2022/10/26 12:50:03 by diosanto          #+#    #+#             */
+/*   Updated: 2022/10/27 13:42:22 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if ((a >= 0 && a <= 31) || (a == 127))
+	size_t	i;
+	size_t	j;
+	char	*str;
+
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s1[i] != '\0')
 	{
-		return (0);
+		str[i] = s1[i];
+		i++;
 	}
-	else
+	while (s2[j] != '\0')
 	{
-		return (1);
+		str[i] = s2[j];
+		i++;
+		j++;
 	}
+	str[i] = '\0';
+	return (str);
 }
-/*
-int	main(void)
-{
-	char	c;
-
-	c = '.';
-	printf("mine : %i\n", isprint(c));
-}*/

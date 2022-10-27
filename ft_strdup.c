@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:04:08 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/26 12:14:39 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/27 13:39:47 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*strdup(const char *s)
 	size_t	len;
 	size_t	i;
 
-	if (!s)
-		return (NULL);
 	len = ft_strlen(s);
 	str = (char *)malloc(sizeof(char) * len);
 	if (!str)

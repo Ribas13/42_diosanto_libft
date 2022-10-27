@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 16:02:00 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/26 12:58:16 by diosanto         ###   ########.fr       */
+/*   Created: 2022/10/24 15:15:07 by diosanto          #+#    #+#             */
+/*   Updated: 2022/10/27 13:42:42 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	a;
+	size_t	j;
+	size_t	dlen;
+	size_t	slen;
 
 	i = 0;
-	if (little == '\0')
-		return ((char *) little);
-	while (big[i] != '\0')
+	dlen = ft_strlen(dst);
+	slen = ft_strlen(src);
+	j = dlen;
+	if (dlen < size - 1 && size > 0)
 	{
-		a = 0;
-		while (big[i + a] == little[a] && i + a < len)
+		while (i + j <= size - 1 && src[i])
 		{
-			if (big[i + a] == '\0' && little[a] == '\0')
-			{
-				return ((char *)&big[i]);
-			}
-			a++;
+			dst[j] = src[i];
+			j++;
+			i++;
 		}
-		if (little[a] == '\0')
-		{
-			return ((char *)big + a);
-		}
-		i++;
+		dst[j] = '\0';
 	}
-	return (0);
+	if (dlen >= size)
+		dlen = size;
+	return (dlen + slen);
 }

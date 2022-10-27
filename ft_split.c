@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:14:06 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/27 12:18:44 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/27 13:38:51 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,13 @@ int	word_counter(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
-	size_t	n;
 	size_t	start;
 	size_t	arr_i;
 	char	**arr;
 
 	i = 0;
 	start = 0;
-	n = word_counter(s, c);
-	arr = (char *)malloc(sizeof(char) * word_counter(s, c));
+	arr = malloc(sizeof(char *) * word_counter(s, c) + 1);
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)

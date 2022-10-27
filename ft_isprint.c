@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 14:50:44 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/26 12:20:16 by diosanto         ###   ########.fr       */
+/*   Created: 2022/10/24 15:14:33 by diosanto          #+#    #+#             */
+/*   Updated: 2022/10/27 13:17:27 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
+#include <ctype.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_isprint(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
+	if ((c >= 0 && c <= 31) || (c == 127))
 	{
-		if (((unsigned char *)str)[i] == (unsigned char)c)
-		{
-			return ((void *)(s + i));
-		}
-		i++;
+		return (0);
 	}
-	return (0);
+	else
+	{
+		return (1);
+	}
 }
+/*
+int	main(void)
+{
+	char	c;
+
+	c = '.';
+	printf("mine : %i\n", isprint(c));
+}*/
