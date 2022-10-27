@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:13:53 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/26 18:47:53 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/27 10:46:59 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int	ft_strlen(const char *s)
+/*int	ft_strlen(const char *s)
 {
 	int	i;
 
@@ -24,7 +24,7 @@ int	ft_strlen(const char *s)
 		i++;
 	}
 	return (i);
-}
+}*/
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -64,14 +64,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }*/
-
+/*
 int	main(void)
 {
-	char	*str1;
-	char	*str2;
+	char	str1[] = "hello";
+	char	str2[] = "lala";
 
-	str1 = "hello";
-	str2 = "lala";
 	ft_strlcpy(str1, str2, 4);
 	printf("%s", str1);
-}
+}*/
