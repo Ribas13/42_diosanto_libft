@@ -6,53 +6,37 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:22:37 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/27 15:20:06 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/27 18:37:37 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	i;
+	size_t	j;
 
-	i = 0;
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
+	if (!s)
 		return (NULL);
-	if (len == 0)
+	i = 0;
+	j = start;
+	if (len > ft_strlen(s))
 	{
-		str[i] = '\0';
-		return (str);
+		len = ft_strlen(s);
 	}
-	while (i >= start && start < len)
+	str = (char *)malloc(len + 1);
+	if (!str)
 	{
-		str[i] = s[start];
+		return (NULL);
+	}
+	while (j < ft_strlen(s) && i < len)
+	{
+		str[i] = s[j];
 		i++;
-		start++;
+		j++;
 	}
 	str[i] = '\0';
 	return (str);
-}*/
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	size_t	a;
-	size_t	i;
-	char	*substring;
-
-	if (!s)
-		return (0);
-	i = start;
-	a = 0;
-	if (len > ft_strlen(s))
-		len = ft_strlen(s) + 1;
-	substring = (char *)malloc(len + 1);
-	if (!substring)
-		return (0);
-	while (i < ft_strlen(s) && a < len)
-		substring[a++] = s[i++];
-	substring[a] = '\0';
-	return (substring);
 }
