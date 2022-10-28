@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:07:30 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/28 12:23:02 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/28 12:55:01 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ int		ft_toupper(int c);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
-char	*ft_itoa(int n);
+//char	*ft_itoa(int n);
 
 #endif

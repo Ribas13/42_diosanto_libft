@@ -25,8 +25,7 @@ SOURCES	=	ft_strlen.c		\
 			ft_strtrim.c	\
 			ft_substr.c		\
 			ft_tolower.c	\
-			ft_toupper.c	\
-			ft_itoa.c
+			ft_toupper.c
 
 NAME 	=	libft.a
 OBJECTS	=	$(SOURCES:.c=.o)
