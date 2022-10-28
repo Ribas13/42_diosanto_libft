@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 16:30:08 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/26 12:20:28 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/28 12:06:58 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_atoi(const char *str)
 	{
 		i++;
 	}
-	while (str[i] == '-' || str[i])
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 		{
