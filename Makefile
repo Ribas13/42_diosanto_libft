@@ -1,4 +1,5 @@
-SOURCES	=	ft_atoi.c		\
+SOURCES	=	ft_strlen.c		\
+			ft_atoi.c		\
 			ft_strlen.c		\
 			ft_bzero.c		\
 			ft_calloc.c		\
@@ -18,7 +19,6 @@ SOURCES	=	ft_atoi.c		\
 			ft_strjoin.c	\
 			ft_strlcat.c	\
 			ft_strlcpy.c	\
-			ft_strlen.c		\
 			ft_strncmp.c	\
 			ft_strnstr.c	\
 			ft_strrchr.c	\
