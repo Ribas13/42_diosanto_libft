@@ -6,25 +6,11 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 11:44:25 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/31 14:38:46 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/31 14:45:04 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-/*size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}*/
 
 int	ft_size(int n)
 {
@@ -65,7 +51,7 @@ char	*ft_itoa(int n)
 		n /= 10;
 		size++;
 	}
-	str = (char *)malloc(ft_size(n) + 1);
+	str = (char *)malloc(size + 1);
 	if (!str)
 		return (0);
 	*(str + size--) = '\0';
