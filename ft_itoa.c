@@ -6,66 +6,77 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 11:44:25 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/31 12:29:25 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/10/31 14:38:46 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+/*size_t	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}*/
 
 int	ft_size(int n)
 {
 	int	size;
 
 	size = 0;
-	while (n)
-	{
-		n /= 10;
-		size++;
-	}
+	if (n > 0)
+		size = 0;
+	else
+		size = 1;
 	return (size);
 }
 
 int	ft_sign(int n)
 {
+	int	sign;
+
+	sign = 0;
 	if (n < 0)
-		return (1);
-	return (0);
+	{
+		sign = -1;
+	}
+	else
+		sign = 1;
+	return (sign);
 }
 
 char	*ft_itoa(int n)
 {
 	long	nbr;
-	int		size;
 	char	*str;
-	int		i;
+	size_t	size;
 
-	nbr = n;
-	i = 0;
 	size = ft_size(n);
-	str = (char *)malloc(size + 1);
+	nbr = (long)n * ft_sign(n);
+	while (n)
+	{
+		n /= 10;
+		size++;
+	}
+	str = (char *)malloc(ft_size(n) + 1);
 	if (!str)
 		return (0);
-	if (n == 0)
+	*(str + size--) = '\0';
+	while (nbr > 0)
 	{
-		str[i] = '0';
-		i++;
-		str[i] = '\0';
+		*(str + size--) = nbr % 10 + '0';
+		nbr /= 10;
 	}
-	while (n > 0)
-	{
-		str[i] = (n % 10) + '0';
-		nbr = nbr / 10;
-		i++;
-	}
-	if (ft_sign(n) == 1)
-		str[i] = '-';
-	str[i] = '\0';
+	if (size == 0 && str[1] == '\0')
+		*(str + size) = '0';
+	else if (size == 0 && str[1] != '\0')
+		*(str + size) = '-';
 	return (str);
-}
-
-int	main(void)
-{
-	printf("%i\n", ft_size(25));
-	printf("%s\n", ft_itoa(25));
 }
