@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:14:43 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/25 17:36:24 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:20:06 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,38 +17,28 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*char_dest;
+	unsigned char	*char_src;
 
-	if (!dest || !src)
-	{
-		return (NULL);
-	}
+	char_dest = ((unsigned char *)dest);
+	char_src = ((unsigned char *)src);
+	i = 0;
 	if (dest > src)
 	{
-		i = (int)n - 1;
-		while (i >= 0)
+		while (i < n)
 		{
-			*(char *)(dest + i) = *(char *)(src + i);
-			i--;
+			char_dest[n - 1 - i] = char_src[n - 1 - i];
+			i++;
 		}
 	}
 	else
 	{
-		i = 0;
-		while (i < (int)n)
+		while (i < n)
 		{
-			*(char *)(dest + i) = *(char *)(src + i);
+			char_dest[i] = char_src[i];
 			i++;
 		}
 	}
 	return (dest);
 }
-/*
-int	main(void)
-{
-	char	src[100] = "Hello";
-
-	ft_memmove(src + 4, src, 5);
-	printf("%s", src);
-	return (0);
-}*/
