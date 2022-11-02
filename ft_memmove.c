@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:14:43 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/02 12:20:06 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/02 14:27:54 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		while (i < n)
-		{
-			char_dest[i] = char_src[i];
-			i++;
-		}
+		ft_memcpy(char_dest, char_src, n);
 	}
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 10:25:57 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/02 12:40:55 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:43:27 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@ t_list	*ft_lstnew(void *content)
 {
 	struct node
 	{
+		
 	}
 }

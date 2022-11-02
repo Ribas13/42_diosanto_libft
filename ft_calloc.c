@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:39:09 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/26 12:20:24 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/02 14:18:15 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	ptr = (void *)malloc(nmemb * size);
-	if (nmemb == 0 || size == 0)
-	{
+	if (!ptr)
 		return (NULL);
-	}
-	ft_bzero(ptr, nmemb);
+	ft_memset(ptr, '\0', (nmemb * size));
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:13:27 by diosanto          #+#    #+#             */
-/*   Updated: 2022/10/25 11:54:55 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/02 14:25:18 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	*ft_memcpy(void *dest, void *src, size_t n)
 	d = dest;
 	s = src;
 	i = 0;
+	if (dest == src || n == 0)
+		return (dest);
 	while (n > 0)
 	{
 		d[i] = s[i];
