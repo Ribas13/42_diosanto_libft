@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:14:06 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/08 13:15:37 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/08 14:26:45 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-size_t	ft_strlen(const char *s)
+/*size_t	ft_strlen(const char *s)
 {
 	int	i;
 
@@ -24,9 +24,9 @@ size_t	ft_strlen(const char *s)
 		i++;
 	}
 	return (i);
-}
+}*/
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+/*char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	i;
@@ -53,7 +53,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	str[i] = '\0';
 	return (str);
-}
+}*/
 
 static int	word_size(char const *s, char c, size_t i)
 {
@@ -74,9 +74,10 @@ static size_t	word_counter(char const *s, char c)
 	size_t	index;
 
 	index = 0;
+	i = 0;
 	while (s[index] != '\0')
 	{
-		if (s[index] == c && s[index + 1] != c)
+		if (s[index] != c && (s[index + 1] == c || s[index + 1] == '\0'))
 		{
 			i++;
 		}
@@ -109,17 +110,3 @@ char	**ft_split(char const *s, char c)
 	tab[words] = 0;
 	return (tab);
 }
-
-/*int	main(void)
-{
-	int	i;
-	char **split;
-	split = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
-	i = 0;
-	//printf("%i\n", word_counter("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' '));
-	while (split[i])
-	{
-		printf("%s\n", split[i]);
-		i++;
-	}
-}*/
