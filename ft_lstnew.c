@@ -6,19 +6,26 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 10:25:57 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/08 15:29:54 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/08 15:41:33 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-/*t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
+	t_list	*link;
 
-}*/
+	link = (t_list *)malloc(sizeof(t_list));
+	if (!link)
+		return (NULL);
+	link->content = (void *)content;
+	link->next = NULL;
+	return (link);
+}
 
-struct node
+/*struct node
 {
 	int value;
 	struct node* next;
@@ -89,4 +96,4 @@ int	main(void)
 	printf("found node with value %d\n", temp->value);
 	printlist(head);
 	return (0);
-}
+}*/
