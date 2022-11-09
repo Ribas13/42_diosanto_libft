@@ -6,12 +6,12 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 10:25:57 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/08 15:41:33 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/09 14:29:22 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {
@@ -25,15 +25,7 @@ t_list	*ft_lstnew(void *content)
 	return (link);
 }
 
-/*struct node
-{
-	int value;
-	struct node* next;
-};
-
-typedef struct node node_t;
-
-void	printlist(node_t *head)
+/*void	printlist(node_t *head)
 {
 	node_t *temporary = head;
 
@@ -51,13 +43,6 @@ node_t	*create_new_node(int value)
 	result->value = value;
 	result->next = NULL;
 	return (result);
-}
-
-node_t	*insert_at_head(node_t **head, node_t *node_to_insert)
-{
-	node_to_insert->next = *head;
-	*head = node_to_insert;
-	return (node_to_insert);
 }
 
 node_t	*find_node(node_t *head, int value)
