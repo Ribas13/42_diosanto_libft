@@ -6,54 +6,13 @@
 /*   By: diosanto <diosanto@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:14:06 by diosanto          #+#    #+#             */
-/*   Updated: 2022/11/08 14:26:45 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/11/15 10:13:00 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-/*size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}*/
-
-/*char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*str;
-	size_t	i;
-	size_t	j;
-
-	if (!s)
-		return (NULL);
-	i = 0;
-	j = start;
-	if (len > ft_strlen(s))
-	{
-		len = ft_strlen(s);
-	}
-	str = (char *)malloc(len + 1);
-	if (!str)
-	{
-		return (NULL);
-	}
-	while (j < ft_strlen(s) && i < len)
-	{
-		str[i] = s[j];
-		i++;
-		j++;
-	}
-	str[i] = '\0';
-	return (str);
-}*/
 
 static int	word_size(char const *s, char c, size_t i)
 {
